@@ -4,7 +4,7 @@
   "description": "automatizacion de prueba cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open"
   },
   "keywords": [
     "QA",
@@ -15,5 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.7.1"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damoreno89/ProyectoCypress"
   }
 }
