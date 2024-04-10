@@ -1,12 +1,22 @@
-const { Given, When, } = require('cypress-cucumber-preprocessor/steps');
+const { Given, When, Then } = require('@badeball/cypress-cucumber-preprocessor');
 const Enters = require("../../support/tasks/EnterCredentials.js");
+const Verifica = require("../../support/questions/verify.js");
 
-Given("David enters the Sauce application", () => {
+
+
+
+Given("ingreso en la pagina de sauce", () => {
     cy.viewport(1280,800);
     cy.visit("https://www.saucedemo.com");
-    cy.url().should('include', '/inventory.html');
 });
 
-When("David enters credentials", function () {
+When("ingreso credenciales de ingreso", function () {
     Enters.credenciales();
 });
+
+Then("verifico que ingreso exitosamente", function () {
+    Verifica.Login();
+});
+
+
+
